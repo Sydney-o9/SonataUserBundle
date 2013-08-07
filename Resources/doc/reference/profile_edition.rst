@@ -39,7 +39,6 @@ First, the ``fos_user`` section need to be altered to set the valid ``Authentica
         profile:  # Authentication Form
             form:
                 type:               fos_user_profile
-                handler:            fos_user.profile.form.handler.default
                 name:               fos_user_profile_form
                 validation_groups:  [Authentication] # Please note : this is not the default value
 
@@ -56,7 +55,6 @@ Next, you need to configure the ``profile`` section of ``sonata_user``:
         profile:  # Profile Form (firstname, lastname, etc ...)
             form:
                 type:               sonata_user_profile
-                handler:            sonata.user.profile.form.handler.default
                 name:               sonata_user_profile_form
                 validation_groups:  [Profile]
 
