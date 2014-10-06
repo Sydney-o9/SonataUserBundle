@@ -51,7 +51,7 @@ class AdminSecurityController extends SecurityController
             return new RedirectResponse($refererUri && $refererUri != $request->getUri() ? $refererUri : $this->container->get('router')->generate('sonata_admin_dashboard'));
         }
 
-        return $this->container->get('templating')->renderResponse('SonataUserBundle:Admin:Security/login.html.'.$this->container->getParameter('fos_user.template.engine'), array(
+        return $this->container->get('templating')->renderResponse('SonataUserBundle:Admin:Security/login.html.twig', array(
             'last_username' => $lastUsername,
             'error'         => $error,
             'base_template' => $this->container->get('sonata.admin.pool')->getTemplate('layout'),
